@@ -7,3 +7,27 @@
 // {'name': 'Sarah', 'eligible': true},
 // {'name': 'Tom', 'eligible': false},
 // ];
+
+void main() {
+// retainWhere Method
+  List<Map<String, dynamic>> usersEligibility = [
+    {'name': 'John', 'eligible': true},
+    {'name': 'Alice', 'eligible': false},
+    {'name': 'Mike', 'eligible': true},
+    {'name': 'Sarah', 'eligible': true},
+    {'name': 'Tom', 'eligible': false},
+  ];
+  usersEligibility.retainWhere((user) => user['eligible'] == true);
+  print(usersEligibility);
+
+// removeWhere Method
+  List<Map<String, dynamic>> usersEligibility1 = [
+    {'name': 'John', 'eligible': true},
+    {'name': 'Alice', 'eligible': false},
+    {'name': 'Mike', 'eligible': true},
+    {'name': 'Sarah', 'eligible': true},
+    {'name': 'Tom', 'eligible': false},
+  ];
+  usersEligibility1.removeWhere((user) => user['eligible'] == true);
+  print(usersEligibility1);
+}
